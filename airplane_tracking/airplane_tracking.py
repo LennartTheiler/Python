@@ -1,5 +1,5 @@
 # In diesem Projekt baue ich eine Objekterkennung, die Flugzeuge am Himmel erkennt, trackt und zählen kann.
-# Die Rohdatei habe ich aus diesem Video:
+# Die Rohdatei habe ich aus diesem Video: https://www.youtube.com/watch?v=RBIpp3B-U9k&t=115s
 # Ich nutze Yolov8 und OpenCV für die Objekterkennung
 
 import cv2
