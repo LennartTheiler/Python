@@ -4,7 +4,7 @@ In diesem Projekt wird ein Deep-Learning-basiertes System entwickelt, das Flugze
 
 ## Inhalt des Projekts
 
-- `projekt_rheinmetall.py`: Das Hauptskript des Projekts. Es führt folgende Schritte aus:
+- `airplane_tracking.py`: Das Hauptskript des Projekts. Es führt folgende Schritte aus:
   - Lädt ein Eingabevideo
   - Verwendet YOLOv8 zur Erkennung von Flugzeugen in jedem Frame
   - Verfolgt erkannte Flugzeuge über mehrere Frames hinweg
@@ -22,8 +22,9 @@ In diesem Projekt wird ein Deep-Learning-basiertes System entwickelt, das Flugze
 
 Im Projektordner befinden sich zwei Videos:
 
-- `original_video.mp4` *(Name ggf. anpassen)*: Das unbearbeitete Eingabevideo mit Flugzeugen am Himmel
-- `output_video.mp4` *(Name ggf. anpassen)*: Das von YOLOv8 verarbeitete Video mit eingezeichneten Bounding Boxes, Track-IDs und Flugzeugzähler
+- `Rohdatei.mp4`: Das unbearbeitete Eingabevideo mit Flugzeugen am Himmel
+  (Quelle: https://www.youtube.com/watch?v=RBIpp3B-U9k&t=115s)
+- `output1.mp4`: Das von YOLOv8 verarbeitete Video mit eingezeichneten Bounding Boxes, Track-IDs und Flugzeugzähler
 
 ## Voraussetzungen
 
