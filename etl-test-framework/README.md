@@ -14,15 +14,17 @@ das automatisch Testdaten generiert, Transformationen validiert und Ergebnisse i
 
 ## Projektstruktur
 
+```text
 etl-test-framework/
-├── etl/ # Dein ETL-Paket
-│ ├── init.py # Package-Marker
-│ └── pipeline.py # Extract, Transform, Load
-├── tests/ # pytest Tests
-│ ├── init.py
-│ └── test_pipeline.py # Unit- & Integrationstests
-├── sample.csv # Beispiel-Datei
-├── main.py # Hauptskript
-├── pytest.ini # pytest-Konfiguration
-├── requirements.txt # Abhängigkeiten
-└── README.md # Projektdokumentation
+├── etl/
+│   ├── __init__.py
+│   └── pipeline.py
+├── tests/
+│   ├── __init__.py
+│   └── test_pipeline.py
+├── sample.csv
+├── main.py
+├── pytest.ini
+├── requirements.txt
+└── README.md
+
