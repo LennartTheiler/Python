@@ -1,0 +1,6 @@
+pytest
+pandas
+SQLAlchemy
+Faker
+pytest-html
+pytest-cov
