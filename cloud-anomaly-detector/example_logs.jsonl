@@ -1,3 +1,0 @@
-{"eventSource": "ec2.amazonaws.com", "eventName": "StartInstances"}
-{"eventSource": "s3.amazonaws.com", "eventName": "PutObject"}
-{"eventSource": "iam.amazonaws.com", "eventName": "CreateUser"}
