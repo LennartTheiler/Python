@@ -1,0 +1,6 @@
+boto3                      # Zugriff auf AWS CloudTrail
+sentence-transformers      # Vortrainiertes Transformer‑Embedding
+pyod                       # Unsupervised Outlier Detection
+streamlit                  # Einfaches Web‑UI
+pytest                     # Unit‑Tests
+flake8                     # Linting
