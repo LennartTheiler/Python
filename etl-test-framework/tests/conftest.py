@@ -8,7 +8,15 @@ fake = Faker()
 
 @pytest.fixture
 def sample_csv(tmp_path) -> str:
-    # Erstelle ein DataFrame mit 100 Zeilen Fake-Daten
+    """
+    Erstellt eine temporäre CSV-Datei mit gefälschten Beispieldaten zur Verwendung in Tests.
+
+    Parameter:
+    tmp_path (pytest.Fixture): Von pytest bereitgestelltes temporäres Verzeichnis
+
+    Rückgabe:
+    str: Pfad zur generierten CSV-Datei als String
+    """
     data = {
         "id": range(100),
         "name": [fake.name() for _ in range(100)],
