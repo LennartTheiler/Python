@@ -6,6 +6,13 @@ import sys
 LOG_FORMAT = "%(asctime)s | %(levelname)-8s | %(name)s: %(message)s"
 
 def main():
+    """
+    Führt den ETL-Prozess aus:
+    - Extrahieren von Daten aus einer CSV-Datei
+    - Transformieren (bereinigen) der Daten
+    - Laden der Daten in eine SQLite-Datenbank
+    """
+    
     logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
 
     # 1) Definiere Pfad zur CSV und Ziel-Datenbank
