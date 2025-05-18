@@ -1,4 +1,4 @@
-# tests/test_pipeline.py
+# test_pipeline.py
 import pytest
 import pandas as pd
 from sqlalchemy import create_engine
@@ -6,7 +6,16 @@ from etl.pipeline import extract, transform, load
 
 @pytest.fixture
 def sample_csv(tmp_path):
-    # Erstelle eine kleine CSV mit Fake‑Daten
+    """
+    Fixture zum Erstellen einer kleinen CSV-Datei mit Beispiel-Daten
+    (inklusive Duplikaten und Nullwerten) zur Verwendung in Tests.
+    
+    Parameter:
+    tmp_path: Von pytest bereitgestellter temporärer Verzeichnispfad
+
+    Rückgabe:
+    str: Pfad zur erzeugten CSV-Datei
+    """
     df = pd.DataFrame({
         "id": [1, 2, 2, 3, None],
         "name": ["Alice", "Bob", "Bob", "Charlie", "Dave"],
@@ -17,11 +26,21 @@ def sample_csv(tmp_path):
     return str(path)
 
 def test_extract(sample_csv):
+    """
+    Testet die Extract-Funktion:
+    - Stellt sicher, dass ein DataFrame zurückgegeben wird
+    - Überprüft, ob die Zeilenanzahl korrekt ist (5 Zeilen in der Beispieldatei)
+    """
     df = extract(sample_csv)
     assert isinstance(df, pd.DataFrame)
     assert df.shape[0] == 5
 
 def test_transform(sample_csv):
+    """
+    Testet die Transform-Funktion:
+    - Stellt sicher, dass keine Duplikate mehr vorhanden sind
+    - Stellt sicher, dass keine fehlenden Werte mehr enthalten sind
+    """
     df = extract(sample_csv)
     df2 = transform(df)
     # keine Duplikate, keine NaNs
@@ -29,6 +48,11 @@ def test_transform(sample_csv):
     assert df2.isnull().sum().sum() == 0
 
 def test_load(sample_csv):
+    """
+    Testet die Load-Funktion mit einer In-Memory SQLite-Datenbank:
+    - Lädt bereinigte Daten in die Datenbank
+    - Liest die Daten zurück und vergleicht sie mit dem Original-DataFrame
+    """
     df = transform(extract(sample_csv))
     db_url = "sqlite:///:memory:"
     table = "tbl"
