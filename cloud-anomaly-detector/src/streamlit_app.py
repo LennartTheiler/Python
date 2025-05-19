@@ -1,4 +1,8 @@
-# src/streamlit_app.py
+# Dieses Programm ist die main-Datei meiner Streamlit-Webanwendung zur Erkennung von Anomalien in 
+# Cloud-Logdateien. Es ermöglicht den Upload einer JSON-basierten Logdatei, extrahiert relevante 
+# Textinformationen, wandelt diese mittels eines Transformer-Modells in semantische Embeddings 
+# um und erkennt mithilfe eines Anomaly-Detection-Algorithmus ungewöhnliche Logeinträge. Die 
+# Ergebnisse werden tabellarisch und gefiltert (nur Anomalien) visualisiert.
 
 import streamlit as st
 import pandas as pd
