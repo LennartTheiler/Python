@@ -12,7 +12,7 @@ from detect import train_detector, predict
 
 st.title("Cloud Log Anomaly Detector")
 
-# 1) Datei‑Upload
+# 1) Wenn eine Datei hochgeladen wurde, starte mit der Analyse
 uploaded = st.file_uploader("Lade JSON‑Logdatei hoch", type="json")
 if uploaded:
     # temporär abspeichern
@@ -20,17 +20,17 @@ if uploaded:
     with open(path, "wb") as f:
         f.write(uploaded.getbuffer())
 
-    # 2) Log‑Vorverarbeitung
+    # 2) Daten werden vorverarbeitet
     logs = load_logs(path)
     texts = extract_text(logs)
     st.write("Extrahierte Texte:")
     st.write(texts)
 
-    # 3) Embedding
+    # 3) Embedding werden erstellt
     with st.spinner("Erstelle Embeddings..."):
         embs = embed(texts)
 
-    # 4) Anomaly Detection
+    # 4) Anomalien werden durch unsupervised learning erkannt
     with st.spinner("Trainiere Detektor..."):
         clf = train_detector(embs)
         scores, labels = predict(clf, embs)
