@@ -24,5 +24,6 @@ cloud-anomaly-detector/
 │   ├── preprocess.py
 │   └── streamlit_app.py
 ├── logs.jsonl
+├── Dockerfile
 ├── requirements.txt
 └── README.md
