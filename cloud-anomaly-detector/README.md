@@ -19,11 +19,11 @@ Fehlkonfigurationen oder Betriebsstörungen frühzeitig zu erkennen und schnell 
 ```text
 cloud-anomaly-detector/
 ├── src/
+|   ├── requirements.txt
 │   ├── embed.py
 │   ├── detect.py
 │   ├── preprocess.py
 │   └── streamlit_app.py
 ├── logs.jsonl
 ├── Dockerfile
-├── requirements.txt
 └── README.md
