@@ -6,6 +6,10 @@ Das System nutzt moderne Natural Language Processing (NLP)-Techniken, indem es L
 identifiziert. Dadurch ermöglicht es eine effektive Überwachung und Analyse großer Logmengen, um Sicherheitsvorfälle, 
 Fehlkonfigurationen oder Betriebsstörungen frühzeitig zu erkennen und schnell darauf reagieren zu können.
 
+Starte das Programm in einer PowerShell mit diesem Befehl:
+```text
+streamlit run streamlit_app.py --server.port=8501 --server.address=localhost
+```
 ## Features
 
 - **Log-Upload**: Lädt CloudTrail-JSON-Logs per Webinterface hoch  
