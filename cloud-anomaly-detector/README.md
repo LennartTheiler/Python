@@ -10,6 +10,17 @@ Starte das Programm in einer PowerShell mit diesem Befehl:
 ```text
 streamlit run streamlit_app.py --server.port=8501 --server.address=localhost
 ```
+
+Alternativ kann das Projekt auch in einem DOcker-Container mit folgenden Befehlen laufen:
+Verwende erst:
+```text
+docker build -t cloud-anomaly-detector .
+```
+und dann:
+```text
+
+```
+
 ## Features
 
 - **Log-Upload**: Lädt CloudTrail-JSON-Logs per Webinterface hoch  
