@@ -18,7 +18,7 @@ docker build -t cloud-anomaly-detector .
 ```
 und dann:
 ```text
-
+docker run -p 8501:8501 cloud-anomaly-detector
 ```
 
 ## Features
